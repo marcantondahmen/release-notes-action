@@ -15,10 +15,10 @@ A workflow using this actions looks as follows:
     
     jobs:
       tagged-release:
-        name: "Tagged Release"
+        name: "Filtered Release Notes"
         runs-on: "ubuntu-latest"
         steps:
-          - uses: "marcantondahmen/release-notes-action@latest"
+          - uses: "marcantondahmen/release-notes-action@0.1.0"
             with:
               repo_token: "${{ secrets.GITHUB_TOKEN }}"
               prerelease: false
