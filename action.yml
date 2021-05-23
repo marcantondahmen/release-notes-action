@@ -16,7 +16,7 @@ inputs:
   filter:
     description: "Filter the included commit messages by a given regex."
     required: false
-    default: ^(fix|feat)
+    default: "^(fix|feat)"
   strict:
     description: "Only include commit messages that follow the conventional commits scheme"
     required: false
