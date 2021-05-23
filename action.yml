@@ -1,4 +1,4 @@
-name: "Automad Release Notes"
+name: "Release Notes"
 author: "marcantondahmen"
 description: "Create GitHub release including release notes based on commit messages"
 inputs:
