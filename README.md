@@ -18,7 +18,7 @@ A workflow using this actions looks as follows:
         name: "Tagged Release"
         runs-on: "ubuntu-latest"
         steps:
-          - uses: "marcantondahmen/release-notes-action@v1.0.0"
+          - uses: "marcantondahmen/release-notes-action@latest"
             with:
               repo_token: "${{ secrets.GITHUB_TOKEN }}"
               prerelease: false
