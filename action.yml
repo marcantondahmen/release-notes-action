@@ -1,0 +1,34 @@
+name: "Automad Release Notes"
+author: "marcantondahmen"
+description: "Create GitHub release including release notes based on commit messages"
+inputs:
+  repo_token:
+    description: "GitHub secret token"
+    required: true
+  draft:
+    description: "Should this release be marked as a draft?"
+    required: false
+    default: false
+  prerelease:
+    description: "Should this release be marked as a pre-release?"
+    required: false
+    default: true
+  filter:
+    description: "Filter the included commit messages by a given regex."
+    required: false
+    default: ^(fix|feat)
+  strict:
+    description: "Only include commit messages that follow the conventional commits scheme"
+    required: false
+    default: true
+outputs:
+  automatic_releases_tag:
+    description: "The release tag this action just processed"
+  upload_url:
+    description: "The URL for uploading additional assets to the release"
+runs:
+  using: "node12"
+  main: "dist/index.js"
+branding:
+  icon: "tag"
+  color: "gray-dark"

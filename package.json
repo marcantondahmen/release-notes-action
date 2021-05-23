@@ -1,0 +1,24 @@
+{
+  "name": "automad-release-notes-action",
+  "version": "1.0.0",
+  "description": "Create GitHub release including release notes based on commit messages",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js --colors"
+  },
+  "author": "Marc Anton Dahmen",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "2.0.0",
+    "@octokit/rest": "16.36.0",
+    "conventional-changelog-angular": "^5.0.12",
+    "conventional-commits-parser": "^3.2.0",
+    "semver": "^7.3.2"
+  },
+  "devDependencies": {
+    "terser-webpack-plugin": "^4.2.3",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
+  }
+}
