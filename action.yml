@@ -12,7 +12,7 @@ inputs:
   prerelease:
     description: "Should this release be marked as a pre-release?"
     required: false
-    default: true
+    default: false
   filter:
     description: "Filter the included commit messages by a given regex."
     required: false
