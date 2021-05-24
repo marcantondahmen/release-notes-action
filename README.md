@@ -18,7 +18,7 @@ A workflow using this actions looks as follows:
         name: "Filtered Release Notes"
         runs-on: "ubuntu-latest"
         steps:
-          - uses: "marcantondahmen/release-notes-action@0.1.2"
+          - uses: "marcantondahmen/release-notes-action@master"
             with:
               repo_token: "${{ secrets.GITHUB_TOKEN }}"
               prerelease: false
