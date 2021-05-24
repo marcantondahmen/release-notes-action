@@ -18,13 +18,13 @@ A workflow using this actions looks as follows:
         name: "Filtered Release Notes"
         runs-on: "ubuntu-latest"
         steps:
-          - uses: "marcantondahmen/release-notes-action@0.1.0"
+          - uses: "marcantondahmen/release-notes-action@0.1.1"
             with:
               repo_token: "${{ secrets.GITHUB_TOKEN }}"
               prerelease: false
               draft: false
               filter: "^(feat|fix)"
-              strict: false
+              strict: true
 
 ## Options
 
@@ -33,7 +33,7 @@ The following options are available to configure a workflow.
 | Name | Description |
 | --- | --- |
 | repo_token | GitHub secret token (required) |
-| draft | Release should be a draft only |
-| prerelease | Release is a pre-release |
-| filter | Filter the included commit messages by a given regex |
-| strict | Only include commit messages that follow the conventional commits scheme |
+| draft | Release is a draft (`false`) |
+| prerelease | Release is a pre-release (`false`) |
+| filter | Filter the included commit messages by a given regex (`"^(feat\|fix)"`) |
+| strict | Only include commit messages that follow the conventional commits scheme (`true`) |
