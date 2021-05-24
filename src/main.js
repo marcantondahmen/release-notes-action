@@ -324,6 +324,9 @@ const main = async () => {
 			repo: context.repo.repo,
 		});
 
+		core.info(`Current release tag is:   ${releaseTag}`);
+		core.info(`Previous release tag was: ${previousReleaseTag}`);
+
 		core.endGroup();
 
 		const commitsSinceRelease = await getCommitsSinceRelease(
