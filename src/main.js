@@ -178,6 +178,8 @@ const getFormattedChangelogEntry = (parsedCommit) => {
 	const url = parsedCommit.extra.commit.html_url;
 	const sha = getShortSHA(parsedCommit.extra.commit.sha);
 
+	entry = `- [[${sha}](${url})]: ${parsedCommit.header}`;
+
 	if (parsedCommit.type) {
 		const scopeStr = parsedCommit.scope ? `**${parsedCommit.scope}**: ` : '';
 		entry = `- ${scopeStr}${parsedCommit.subject} ([${sha}](${url}))`;
