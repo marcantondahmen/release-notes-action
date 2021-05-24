@@ -14,8 +14,8 @@ A workflow using this actions looks as follows:
           - "*"
     
     jobs:
-      tagged-release:
-        name: "Filtered Release Notes"
+      release-notes:
+        name: "Regex Filtered Release Notes"
         runs-on: "ubuntu-latest"
         steps:
           - uses: "marcantondahmen/release-notes-action@master"
